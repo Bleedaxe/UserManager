@@ -1,0 +1,28 @@
+﻿@model List<UsersManager.Entities.User>
+
+@{
+    Layout = "../Shared/SiteLayout.cshtml";
+}
+
+<a href="/Users/Add">New</a>
+<table>
+    <tr>
+        <td>Username</td>
+        <td>First Name</td>
+        <td>Last Name</td>
+        <td></td>
+    </tr>
+    @foreach (User item in Model)   
+    {
+        <tr>
+            <td>@item.Username</td>
+            <td>@item.FirstName</td>
+            <td>@item.LastName</td>
+            <td>
+                <a href="/Users/Edit?id=@item.Id">edit</a>
+                <a href="/Users/Delete?id=@item.Id">delete</a>
+            </td>
+        </tr>
+    }
+</table>
+                </td>

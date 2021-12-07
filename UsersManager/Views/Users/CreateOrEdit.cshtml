@@ -1,0 +1,22 @@
+﻿@model UsersManager.Entities.User
+@{ 
+    Layout = "~/Views/Shared/SiteLayout.cshtml";
+}
+
+<form method="post">
+    <input type="hidden" name="Id" value="@Model.Id" />
+
+    <label for="Username">Username</label>
+    <input type="text" name="Username" value="@Model.Username" />
+    <br />
+    <label for="Password">Password</label>
+    <input type="password" name="Password" value="@Model.Password" />
+    <br />
+    <label for="FirstName">First Name</label>
+    <input type="text" name="FirstName" value="@Model.FirstName" />
+    <br />
+    <label for="LastName">Last Name</label>
+    <input type="text" name="LastName" value="@Model.LastName" />
+    <br />
+    <input type="submit" value="@ViewBag["Type"]" />
+</form>
